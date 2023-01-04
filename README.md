@@ -196,15 +196,3 @@ from it's neighbouring pixels
 - After getting transformation matrix, while applying RANSAC, we need to calculate it's inverse. Some transformation matrix are singular matrix and no inverse is possible for those matrix which resulted in failure of our code. Four points are selected randomly so if any singular matrix is found, code was failing. It was happening totally random and surprisingly frequent. Fixed it using 'Try Except'.
 ## Observation 
 - While testing on some images, we observed that, image stitching, running our code, requires images (image1 and image2) to be overlapped significantly. Else code might not find proper ORB points and transformation will fail.
-
-# Contribution of Authors
-The report for the individual part of the code were implemented the authors of the code.
-
-For part 1 of the assignment, different feature matching and clustering techniques were analyzed by Madhav(makeajari)
-The report for part 1 was done by Madhav
-
-For part 2 of the assignment, different methods for finding transformation matrix were explored by Saumya(mehtasau).
-The report for part 2 was done by Saumya
-
-For part3 of the assignment, RANSAC was implemented and image warping method was tweaked to get image boundaries for the image that needs to be stiched to the source image. This was achieved by first finding the bounding box (new height and width)
-of the resulting image and then proceeding to place the previous image and then stiching the other image. Part3 was implemented by Krutik(kaoza). The report for part3 was done by krutik
