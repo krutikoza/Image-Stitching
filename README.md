@@ -190,7 +190,13 @@ from it's neighbouring pixels
 - We assumed that the image is stiched on right top of the image. In our case, image2 is stiched on right top of image1.
 
 ## Results
-- Some results are stored in "Stiched_images_example" folder. Using simple images results in acceptable panarom image.
+- Some results are stored in "Stiched_images_example" folder. Below is an example.
+## Input Image 1:
+![image_1](https://user-images.githubusercontent.com/61111725/219487381-9d8525ac-54cb-4b5a-b365-3e5a0f8914e8.jpg)
+## Input Image 2:
+![image_2](https://user-images.githubusercontent.com/61111725/219487468-3e2170a7-d63f-4832-955c-5bdbf255d16a.jpg)
+## Output:
+![output](https://user-images.githubusercontent.com/61111725/219487482-bd930742-3d0a-494a-b16a-b9fcf6260a65.jpg)
 
 ##  Problems
 - After getting transformation matrix, while applying RANSAC, we need to calculate it's inverse. Some transformation matrix are singular matrix and no inverse is possible for those matrix which resulted in failure of our code. Four points are selected randomly so if any singular matrix is found, code was failing. It was happening totally random and surprisingly frequent. Fixed it using 'Try Except'.
